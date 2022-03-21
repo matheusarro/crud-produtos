@@ -1,12 +1,27 @@
+// react
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import App from './App';
+// grommet
+import { Grommet } from 'grommet';
+// others
 import reportWebVitals from './reportWebVitals';
+
+const theme = {
+  global: {
+    font: {
+      family: 'Roboto',
+      size: '18px',
+      height: '20px',
+    },
+  },
+};
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Grommet full theme={theme} >
+      <App />
+    </Grommet>
   </React.StrictMode>,
   document.getElementById('root')
 );

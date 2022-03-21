@@ -1,0 +1,65 @@
+{
+  "next_id": 6,
+  "products": [
+    {
+      "id": 1,
+      "name": "Caneta Azul",
+      "stock": {
+        "total": 42,
+        "cutting": 40
+      },
+      "price": {
+        "original": 1.55,
+        "sales": 1.35
+      }
+    },
+    {
+      "id": 2,
+      "name": "Caneta Preta",
+      "stock": {
+        "total": 45,
+        "cutting": 25
+      },
+      "price": {
+        "original": 1.55,
+        "sales": 1.35
+      }
+    },
+    {
+      "id": 3,
+      "name": "Caneta Vermelha",
+      "stock": {
+        "total": 36,
+        "cutting": 20
+      },
+      "price": {
+        "original": 1.55,
+        "sales": 1.35
+      }
+    },
+    {
+      "id": 4,
+      "name": "Corretivo",
+      "stock": {
+        "total": 40,
+        "cutting": 26
+      },
+      "price": {
+        "original": 1.99,
+        "sales": 1.49
+      }
+    },
+    {
+      "id": 5,
+      "name": "Caderno",
+      "stock": {
+        "total": 28,
+        "cutting": 11
+      },
+      "price": {
+        "original": 25.50,
+        "sales": 19.99
+      }
+    }
+  ]
+}
