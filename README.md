@@ -1,70 +1,32 @@
-# Getting Started with Create React App
+# Cadastro de Produtos
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Aplicação em React com o objetivo de simular ações como o cadastro de Produto, Estoque e Preço. Como não há comunicação com API ou base de dados, o código contém os dados "mockados" para utilização das funcionalidade de Criar, Editar e Deletar. A lista padrão de produtos está no arquivo `products.json` dentro do diretório `src\utils`.
 
-## Available Scripts
+## Como Executar Localmente
+Para executar o projeto localmente é necessário ter o Node.js instalado na máquina, preferencialmente na versão estável, juntamente com os gerenciadores de pacote NPM e/ou Yarn.
 
-In the project directory, you can run:
+#### Opção 1 – via Yarn
+ - Acessar o diretório raiz do projeto
+ - Executar o comando `yarn` uma vez para instalar as dependências
+ - Executar o comando `yarn start` para executar em modo de desenvolvimento
 
-### `yarn start`
+#### Opção 2 – via NPM
+ - Acessar o diretório raiz do projeto
+ - Executar o comando `npm install` uma vez para instalar as dependências
+ - Executar o comando `npm start` para iniciar a aplicação em modo de desenvolvimento
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Feito isso, basta aguardar a aplicação abrir no navegador, no endereço http://localhost:3000. Ela irá reiniciar automaticamente caso alguma mudança seja salva em qualquer um dos arquivos e diretórios do projeto.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Deploys Ativos
+ [![Netlify Status](https://api.netlify.com/api/v1/badges/9f02f1b6-6704-4952-8ae4-dc3bbe136b51/deploy-status)](https://app.netlify.com/sites/ma-crud-produtos/deploys)
 
-### `yarn test`
+## Tecnologias
+- [React](https://reactjs.org/)
+- [Create React App](https://create-react-app.dev/)
+- [Grommet](https://github.com/grommet/grommet)
+- [Grommet Icons](https://github.com/grommet/grommet-icons)
+- [Styled Componentes](https://styled-components.com/)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+#### Prévia
 
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+![image](https://user-images.githubusercontent.com/68196346/159554546-854849cc-8a70-44de-adab-4b3c030d652c.png)
