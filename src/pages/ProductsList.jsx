@@ -1,8 +1,8 @@
 // react
 import { useEffect, useState } from 'react';
 // grommet
-import { Box, Button, Card, CardBody, CardFooter, CardHeader, Grid, Heading, Layer, Text, TextInput, Tip } from 'grommet';
-import { AddCircle, Edit, Trash } from 'grommet-icons';
+import { Box, Button, Card, CardBody, CardFooter, CardHeader, Grid, Heading, Layer, Pagination, Text, TextInput, Tip } from 'grommet';
+import { AddCircle, Edit, Search, Trash } from 'grommet-icons';
 // in-house
 import currencyFormatter from '../utils/currencyFormatter';
 
@@ -13,11 +13,23 @@ const ProductsList = ( {setSelectedPage, allProducts, setAllProducts, setSelecte
   const [filteredList, setFilteredList] = useState(allProducts);
   const [idToDelete, setIdToDelete] = useState(undefined);
   const [showDeletionDialog, setShowDeletionDialog] = useState(false);
+  const [pageNumber, setPageNumber] = useState(1);    // controla a página atual a ser exibida
+  const [pageList, setPageList] = useState([]);   // lista de itens a ser exibida na página
 
   useEffect(() => {
-    const newList = allProducts.filter(product => product.name.toLowerCase().includes(searchText.toLowerCase()) || product.id.toString() === searchText.toLowerCase());
-    setFilteredList(newList);
+    if (searchText.length > 0) {
+      const newList = allProducts.filter(product => product.name.toLowerCase().includes(searchText.toLowerCase()) || product.id.toString() === searchText.toLowerCase());
+      setFilteredList(newList);
+      setPageNumber(1);
+    } else {
+      setFilteredList(allProducts);
+    }
   }, [searchText, allProducts]);
+
+  useEffect(() => {
+    const newPage = filteredList.slice((pageNumber-1)*10, pageNumber*10);
+    setPageList(newPage);
+  }, [filteredList, pageNumber]);
 
   const handleItemEditClick = (productID) => {
     setSelectedProductID(productID);
@@ -36,9 +48,11 @@ const ProductsList = ( {setSelectedPage, allProducts, setAllProducts, setSelecte
 
       <Box direction='row' gap='medium'>
         <TextInput
-          placeholder="Pesquise o produto por código ou nome"
+          id='serach-text-input'
+          placeholder='Pesquise produtos por código ou nome'
           value={searchText}
-          onChange={event => setSearchText(event.target.value)}
+          onChange={(event) => setSearchText(event.target.value)}
+          icon={<Search />}
         />
         <Tip content="Cadastrar novo produto">
           <Button primary
@@ -50,7 +64,7 @@ const ProductsList = ( {setSelectedPage, allProducts, setAllProducts, setSelecte
         </Tip>
       </Box>
 
-      <Box>
+      <Box gap='medium'>
         <Grid
           rows='small'
           columns='small'
@@ -59,7 +73,7 @@ const ProductsList = ( {setSelectedPage, allProducts, setAllProducts, setSelecte
           justifyContent='between'
         >
           {
-            filteredList.map( product =>
+            pageList.map( product =>
               <Card height="small" width="small" background="light-1" key={product.id}>
                 <CardHeader pad="small">{product.name}</CardHeader>
 
@@ -90,6 +104,13 @@ const ProductsList = ( {setSelectedPage, allProducts, setAllProducts, setSelecte
             )
           }
         </Grid>
+        <Pagination
+          numberItems={filteredList.length}
+          step={10}
+          page={pageNumber}
+          onChange={({page}) => setPageNumber(page)}
+          alignSelf='end'
+        />
       </Box>
 
       {showDeletionDialog && (

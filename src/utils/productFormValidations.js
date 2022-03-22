@@ -1,9 +1,9 @@
 export function validatePriceOriginal (fieldValue, formValue) {
   switch (true) {
-    case fieldValue < formValue.price_sales: {
+    case parseFloat(fieldValue) < parseFloat(formValue.price_sales): {
       return `O valor não pode ser menor que 'Preço Por'`
     }
-    case fieldValue < 0: {
+    case parseFloat(fieldValue) < 0: {
       return `O valor não pode ser negativo`
     }
     default: {
@@ -14,7 +14,7 @@ export function validatePriceOriginal (fieldValue, formValue) {
 
 export function validatePriceSales (fieldValue, formValue) {
   switch (true) {
-    case fieldValue < 0: {
+    case parseFloat(fieldValue) < 0: {
       return `O valor não pode ser negativo`
     }
     default: {

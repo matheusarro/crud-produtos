@@ -32,8 +32,8 @@ function App() {
   }
 
   return (
-    <Box fill background='lightgrey'>
-      <Box fill='vertical' alignSelf='center' alignContent='center' width='xlarge' pad='medium' background='white'>
+    <Box fill>
+      <Box fill='vertical' alignSelf='center' alignContent='center' width='xlarge' pad='medium'>
         {
           handlePageChange()
         }
