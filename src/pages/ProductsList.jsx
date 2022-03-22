@@ -19,13 +19,13 @@ const ProductsList = ( {setSelectedPage, allProducts, setAllProducts, setSelecte
   const screenSize = useContext(ResponsiveContext);   // retorna o tamanho da tela
 
   useEffect(() => {
-    if (searchText.length > 0) {
+    if (searchText.trim().length > 0) {
       const newList = allProducts.filter(product => 
         product.name.toLowerCase()
         .normalize('NFD').replace(/[\u0300-\u036f]/g, '')   // para desconsiderar acentuação das palavras
-        .includes(searchText.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, ''))
+        .includes(searchText.trim().toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, ''))
         || 
-        product.id.toString() === searchText.toLowerCase());
+        product.id.toString() === searchText.trim().toLowerCase());
       setFilteredList(newList);
       setPageNumber(1);
     } else {
@@ -47,6 +47,11 @@ const ProductsList = ( {setSelectedPage, allProducts, setAllProducts, setSelecte
     const newList = allProducts.filter(product => product.id !== idToDelete);    // retorna todos, exceto o código a ser excluído
     setAllProducts(newList);
     setIdToDelete(undefined);
+
+    if (pageNumber*10-9 >= filteredList.length) {   // ao apagar todos os produtos de uma página, retorna para a página anterior
+      if (pageNumber !== 1)
+      setPageNumber(pageNumber-1);
+    }
   };
 
   return (
