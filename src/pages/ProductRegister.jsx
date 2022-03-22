@@ -10,7 +10,12 @@ const ProductRegister = ( {setSelectedPage, allProducts, setAllProducts, nextPro
     <Box basis='auto' alignContent='center' gap='medium'>
       <Heading alignSelf='center'>Cadastrar Produto</Heading>
 
-      <ProductForm mode='register' setSelectedPage={setSelectedPage} allProducts={allProducts} setAllProducts={setAllProducts} nextProdID={nextProdID} setNextProdID={setNextProdID} />
+      <ProductForm
+        mode='register'
+        setSelectedPage={setSelectedPage}
+        allProducts={allProducts} setAllProducts={setAllProducts}
+        nextProdID={nextProdID} setNextProdID={setNextProdID}
+      />
     </Box>
   )
 };
