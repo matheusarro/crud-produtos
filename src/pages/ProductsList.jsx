@@ -20,7 +20,12 @@ const ProductsList = ( {setSelectedPage, allProducts, setAllProducts, setSelecte
 
   useEffect(() => {
     if (searchText.length > 0) {
-      const newList = allProducts.filter(product => product.name.toLowerCase().includes(searchText.toLowerCase()) || product.id.toString() === searchText.toLowerCase());
+      const newList = allProducts.filter(product => 
+        product.name.toLowerCase()
+        .normalize('NFD').replace(/[\u0300-\u036f]/g, '')   // para desconsiderar acentuação das palavras
+        .includes(searchText.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, ''))
+        || 
+        product.id.toString() === searchText.toLowerCase());
       setFilteredList(newList);
       setPageNumber(1);
     } else {
