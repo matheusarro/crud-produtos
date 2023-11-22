@@ -18,7 +18,7 @@ Para executar o projeto localmente é necessário ter o Node.js instalado na má
 Feito isso, basta aguardar a aplicação abrir no navegador, no endereço http://localhost:3000. Ela irá reiniciar automaticamente caso alguma mudança seja salva em qualquer um dos arquivos e diretórios do projeto.
 
 ## Deploys Ativos
- [![Netlify Status](https://api.netlify.com/api/v1/badges/9f02f1b6-6704-4952-8ae4-dc3bbe136b51/deploy-status)](https://app.netlify.com/sites/ma-crud-produtos/deploys)
+ [![Netlify Status](https://api.netlify.com/api/v1/badges/9f02f1b6-6704-4952-8ae4-dc3bbe136b51/deploy-status)](https://ma-crud-produtos.netlify.app/)
 
 ## Tecnologias
 - [React](https://reactjs.org/)
