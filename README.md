@@ -22,7 +22,7 @@ Feito isso, basta aguardar a aplicação abrir no navegador, no endereço http:/
 
 ## Tecnologias
 - [React](https://reactjs.org/)
-- [Create React App](https://create-react-app.dev/)
+- [Vite](https://vite.dev/)
 - [Grommet](https://github.com/grommet/grommet)
 - [Grommet Icons](https://github.com/grommet/grommet-icons)
 - [Styled Componentes](https://styled-components.com/)
