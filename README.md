@@ -1,31 +1,39 @@
 # Cadastro de Produtos
 
-Aplicação em React com o objetivo de simular ações como o cadastro de Produto, Estoque e Preço. Como não há comunicação com API ou base de dados, o código contém os dados "mockados" para utilização das funcionalidade de Criar, Editar e Deletar. A lista padrão de produtos está no arquivo `products.json` dentro do diretório `src\utils`.
+Este projeto nasceu como um exercício de aprendizado de React e está sendo retomado como um espaço para experimentar tecnologias atuais e evoluir o código — por curiosidade e pelo prazer de construir.
+
+A aplicação simula o cadastro, a edição e a exclusão de produtos, incluindo informações de estoque e preço. Ainda não há integração com API ou banco de dados; os dados são mockados e a lista inicial está em `src/utils/products.json`.
 
 ## Como Executar Localmente
-Para executar o projeto localmente é necessário ter o Node.js instalado na máquina, preferencialmente na versão estável, juntamente com os gerenciadores de pacote NPM e/ou Yarn.
+É necessário ter o Node.js 20.19+ ou 22.12+ e o Yarn instalados.
 
-#### Opção 1 – via Yarn
- - Acessar o diretório raiz do projeto
- - Executar o comando `yarn` uma vez para instalar as dependências
- - Executar o comando `yarn start` para executar em modo de desenvolvimento
+Na raiz do projeto, instale as dependências e inicie o servidor de desenvolvimento:
 
-#### Opção 2 – via NPM
- - Acessar o diretório raiz do projeto
- - Executar o comando `npm install` uma vez para instalar as dependências
- - Executar o comando `npm start` para iniciar a aplicação em modo de desenvolvimento
+```bash
+yarn
+yarn dev
+```
 
-Feito isso, basta aguardar a aplicação abrir no navegador, no endereço http://localhost:3000. Ela irá reiniciar automaticamente caso alguma mudança seja salva em qualquer um dos arquivos e diretórios do projeto.
+A aplicação estará disponível em http://localhost:5173. O servidor atualiza a página automaticamente quando os arquivos são alterados.
+
+Para verificar os tipos, executar o lint ou gerar o build de produção:
+
+```bash
+yarn typecheck
+yarn lint
+yarn build
+```
 
 ## Deploys Ativos
  [![Netlify Status](https://api.netlify.com/api/v1/badges/9f02f1b6-6704-4952-8ae4-dc3bbe136b51/deploy-status)](https://ma-crud-produtos.netlify.app/)
 
 ## Tecnologias
-- [React](https://reactjs.org/)
+- [React](https://react.dev/)
+- [TypeScript](https://www.typescriptlang.org/)
 - [Vite](https://vite.dev/)
-- [Grommet](https://github.com/grommet/grommet)
-- [Grommet Icons](https://github.com/grommet/grommet-icons)
-- [Styled Componentes](https://styled-components.com/)
+- [Grommet](https://v2.grommet.io/)
+- [Grommet Icons](https://icons.grommet.io/)
+- [Styled Components](https://styled-components.com/)
 
 #### Prévia
 
