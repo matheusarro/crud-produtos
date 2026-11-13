@@ -1,4 +1,6 @@
-{
+import { ProductMockType } from "../types/product";
+
+const productListMock: ProductMockType = {
   "next_id": 24,
   "products": [
     {
@@ -57,8 +59,8 @@
         "cutting": 13
       },
       "price": {
-        "original": 15.00,
-        "sales": 13.40
+        "original": 15.0,
+        "sales": 13.4
       }
     },
     {
@@ -69,8 +71,8 @@
         "cutting": 11
       },
       "price": {
-        "original": 3.60,
-        "sales": 3.60
+        "original": 3.6,
+        "sales": 3.6
       }
     },
     {
@@ -81,8 +83,8 @@
         "cutting": 3
       },
       "price": {
-        "original": 1.50,
-        "sales": 1.30
+        "original": 1.5,
+        "sales": 1.3
       }
     },
     {
@@ -93,8 +95,8 @@
         "cutting": 6
       },
       "price": {
-        "original": 19.90,
-        "sales": 15.90
+        "original": 19.9,
+        "sales": 15.9
       }
     },
     {
@@ -105,8 +107,8 @@
         "cutting": 12
       },
       "price": {
-        "original": 15.90,
-        "sales": 13.90
+        "original": 15.9,
+        "sales": 13.9
       }
     },
     {
@@ -117,8 +119,8 @@
         "cutting": 5
       },
       "price": {
-        "original": 11.00,
-        "sales": 11.00
+        "original": 11.0,
+        "sales": 11.0
       }
     },
     {
@@ -129,8 +131,8 @@
         "cutting": 11
       },
       "price": {
-        "original": 25.00,
-        "sales": 22.30
+        "original": 25.0,
+        "sales": 22.3
       }
     },
     {
@@ -141,8 +143,8 @@
         "cutting": 8
       },
       "price": {
-        "original": 2.90,
-        "sales": 1.90
+        "original": 2.9,
+        "sales": 1.9
       }
     },
     {
@@ -153,8 +155,8 @@
         "cutting": 7
       },
       "price": {
-        "original": 19.20,
-        "sales": 15.90
+        "original": 19.2,
+        "sales": 15.9
       }
     },
     {
@@ -165,8 +167,8 @@
         "cutting": 0
       },
       "price": {
-        "original": 19.20,
-        "sales": 15.90
+        "original": 19.2,
+        "sales": 15.9
       }
     },
     {
@@ -177,8 +179,8 @@
         "cutting": 8
       },
       "price": {
-        "original": 19.20,
-        "sales": 15.90
+        "original": 19.2,
+        "sales": 15.9
       }
     },
     {
@@ -189,8 +191,8 @@
         "cutting": 16
       },
       "price": {
-        "original": 19.20,
-        "sales": 15.90
+        "original": 19.2,
+        "sales": 15.9
       }
     },
     {
@@ -201,8 +203,8 @@
         "cutting": 14
       },
       "price": {
-        "original": 7.90,
-        "sales": 7.90
+        "original": 7.9,
+        "sales": 7.9
       }
     },
     {
@@ -213,8 +215,8 @@
         "cutting": 10
       },
       "price": {
-        "original": 5.90,
-        "sales": 3.60
+        "original": 5.9,
+        "sales": 3.6
       }
     },
     {
@@ -225,8 +227,8 @@
         "cutting": 16
       },
       "price": {
-        "original": 12.00,
-        "sales": 8.70
+        "original": 12.0,
+        "sales": 8.7
       }
     },
     {
@@ -237,8 +239,8 @@
         "cutting": 8
       },
       "price": {
-        "original": 30.50,
-        "sales": 29.90
+        "original": 30.5,
+        "sales": 29.9
       }
     },
     {
@@ -249,8 +251,8 @@
         "cutting": 10
       },
       "price": {
-        "original": 45.00,
-        "sales": 42.50
+        "original": 45.0,
+        "sales": 42.5
       }
     },
     {
@@ -261,8 +263,8 @@
         "cutting": 9
       },
       "price": {
-        "original": 3.00,
-        "sales": 2.50
+        "original": 3.0,
+        "sales": 2.5
       }
     },
     {
@@ -273,9 +275,11 @@
         "cutting": 8
       },
       "price": {
-        "original": 3.80,
-        "sales": 3.30
+        "original": 3.8,
+        "sales": 3.3
       }
     }
   ]
 }
+
+export default productListMock;
